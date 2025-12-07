@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import Navigation from './components/Navigation';
-import LandingPage from './components/LandingPage';
 import DesignProbabilityChart from './components/DesignProbabilityChart';
 import DesignProbabilitySources from './components/DesignProbabilitySources';
 import TailwindBootstrapAnalysis from './components/TailwindBootstrapAnalysis';
 import GradientAnalysis from './components/GradientAnalysis';
+import CreativityAgent from './components/CreativityAgent';
+import MostRatedPopularTopics from './components/MostRatedPopularTopics';
+import MinimalCreativityLanding from './components/MinimalCreativityLanding';
 
 function App() {
-  const [currentView, setCurrentView] = useState('landing');
+  const [currentView, setCurrentView] = useState('creativity-landing');
 
   const renderCurrentView = () => {
     switch (currentView) {
-      case 'landing':
-        return <LandingPage />;
+      case 'creativity-landing':
+        return <MinimalCreativityLanding />;
       case 'probabilities':
         return <DesignProbabilityChart />;
       case 'sources':
@@ -21,8 +23,12 @@ function App() {
         return <TailwindBootstrapAnalysis />;
       case 'gradients':
         return <GradientAnalysis />;
+      case 'creativity':
+        return <CreativityAgent />;
+      case 'trending':
+        return <MostRatedPopularTopics />;
       default:
-        return <LandingPage />;
+        return <MinimalCreativityLanding />;
     }
   };
 
