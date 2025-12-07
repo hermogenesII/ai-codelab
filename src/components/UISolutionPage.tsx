@@ -117,6 +117,49 @@ const UISolutionPage: React.FC = () => {
       pros: ["Adobe design system", "Accessibility excellence", "Design tokens"],
       website: "https://react-spectrum.adobe.com",
       github: "https://github.com/adobe/react-spectrum"
+    },
+    {
+      name: "Tweakcn",
+      description: "Visual editor for shadcn/ui components with beautiful themes",
+      pros: ["Theme generator", "shadcn/ui integration", "Visual customization"],
+      website: "https://tweakcn.com",
+      editor: "https://tweakcn.com/editor/theme"
+    },
+    {
+      name: "React Bits",
+      description: "Modern React components and animations library",
+      pros: ["Animation components", "Modern UI patterns", "Developer-friendly"],
+      website: "https://reactbits.dev"
+    },
+    {
+      name: "21st.dev",
+      description: "Modern UI components and design system",
+      pros: ["Modern aesthetics", "Component library", "Design system"],
+      website: "https://21st.dev"
+    },
+    {
+      name: "Magic UI Pro",
+      description: "Premium UI components with magical animations",
+      pros: ["Premium components", "Animation library", "High-quality designs"],
+      website: "https://pro.magicui.design"
+    },
+    {
+      name: "Align UI",
+      description: "Professional UI components and design system",
+      pros: ["Professional quality", "Consistent design", "Enterprise-ready"],
+      website: "https://pro.alignui.com"
+    },
+    {
+      name: "Bento Grids",
+      description: "Beautiful grid layouts and component arrangements",
+      pros: ["Grid systems", "Layout patterns", "Visual hierarchy"],
+      website: "https://bentogrids.com"
+    },
+    {
+      name: "Grainient Supply",
+      description: "Free UI resources, gradients, and design assets",
+      pros: ["Free resources", "Gradients library", "Design assets"],
+      website: "https://grainient.supply/freebies"
     }
   ];
 
@@ -414,7 +457,7 @@ const UISolutionPage: React.FC = () => {
               </div>
 
               {/* Component Library Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
                 {recommendations.map((lib, index) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{lib.name}</h3>
