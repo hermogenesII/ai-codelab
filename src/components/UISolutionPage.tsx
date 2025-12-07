@@ -137,10 +137,10 @@ const UISolutionPage: React.FC = () => {
     setIsAnalyzing(true);
 
     // Simulate AI analysis delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000));                                      
 
     // Generate comprehensive design system JSON
-    const extractedDesignSystem: DesignSystem = {
+    const                                                                                                                                         extractedDesignSystem: DesignSystem = {
       colors: {
         primary: ["#1a365d", "#2b6cb0", "#3182ce", "#4299e1"],
         secondary: ["#2d3748", "#4a5568", "#718096", "#a0aec0"],
@@ -705,6 +705,61 @@ const UISolutionPage: React.FC = () => {
                      [Any specific technical or UX requirements]
 
                     Please develop this application with clean, maintainable code and intuitive user experience.
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">📚 Additional Resources</h4>
+                  <div className="space-y-3">
+                    <div>
+                      <h5 className="font-medium text-gray-800 mb-1">📄 Improved Prompt Guide</h5>
+                      <a
+                        href="https://docs.google.com/document/d/1BWobkvoRyDJCM6sG2oDa3XN_mzJbZLvT4a7C8sT93yc/edit?tab=t.0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 underline text-sm"
+                      >
+                        https://docs.google.com/document/d/1BWobkvoRyDJCM6sG2oDa3XN_mzJbZLvT4a7C8sT93yc/edit?tab=t.0
+                      </a>
+                    </div>
+
+                    <div>
+                      <h5 className="font-medium text-gray-800 mb-1">🛠️ Front-End Template</h5>
+                      <a
+                        href="https://docs.google.com/document/d/1bLg__sfOQIhc9mWjdaZBXtR52zPEdgp9W7RE17DgrRk/edit?tab=t.0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 underline text-sm"
+                      >
+                        https://docs.google.com/document/d/1bLg__sfOQIhc9mWjdaZBXtR52zPEdgp9W7RE17DgrRk/edit?tab=t.0
+                      </a>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h5 className="font-medium text-gray-800 mb-1">📹 YouTube Tutorial 1</h5>
+                        <a
+                          href="https://www.youtube.com/watch?v=djDZHAi75dk"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 underline text-sm"
+                        >
+                          Advanced Design System Extraction
+                        </a>
+                      </div>
+
+                      <div>
+                        <h5 className="font-medium text-gray-800 mb-1">📹 YouTube Tutorial 2</h5>
+                        <a
+                          href="https://www.youtube.com/watch?v=U1_nzjWUpL4"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 underline text-sm"
+                        >
+                          Frontend Development Best Practices
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
