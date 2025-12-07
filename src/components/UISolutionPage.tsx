@@ -65,6 +65,12 @@ const UISolutionPage: React.FC = () => {
       title: "🚀 Advanced Design System",
       subtitle: "Professional JSON + Development Templates",
       description: "Comprehensive design extraction + frontend development frameworks"
+    },
+    {
+      id: 5,
+      title: "🤖 AI Skills & Frameworks",
+      subtitle: "Claude Skills for Creative Design",
+      description: "Dynamic context loading to avoid generic AI patterns"
     }
   ];
 
@@ -263,7 +269,7 @@ const UISolutionPage: React.FC = () => {
 
       {/* Approach Selection */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 mb-12">
           {approaches.map((approach) => (
             <button
               key={approach.id}
@@ -804,6 +810,207 @@ const UISolutionPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeApproach === 5 && (
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <span className="text-3xl mr-4">🤖</span>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    AI Skills & Frameworks for Creative Design
+                  </h2>
+                  <p className="text-gray-600">Dynamic context loading to avoid generic AI patterns</p>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-semibold text-blue-900 mb-4">🎯 The Distributional Convergence Problem</h3>
+                <div className="text-blue-800 space-y-3">
+                  <p>
+                    <strong>Generic AI outputs stem from "distributional convergence"</strong> - LLMs predict tokens based on statistical patterns in training data.
+                    Safe design choices dominate web training data, leading to:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                    <div className="bg-white p-3 rounded border">
+                      <h4 className="font-medium text-red-600 mb-2">❌ Common AI Defaults</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• Inter/Roboto fonts</li>
+                        <li>• Purple gradients on white</li>
+                        <li>• Minimal animations</li>
+                        <li>• Generic layouts</li>
+                      </ul>
+                    </div>
+                    <div className="bg-white p-3 rounded border">
+                      <h4 className="font-medium text-green-600 mb-2">✅ Creative Alternatives</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• Space Grotesk, JetBrains Mono</li>
+                        <li>• Cultural color palettes</li>
+                        <li>• Micro-interactions & motion</li>
+                        <li>• Asymmetrical layouts</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-8">
+                <h3 className="text-lg font-semibold text-purple-900 mb-4">🧠 Skills: Dynamic Context Loading</h3>
+                <div className="text-purple-800 space-y-4">
+                  <p>
+                    <strong>Skills solve the context overhead problem</strong> by providing domain-specific guidance on demand without permanent context bloat.
+                  </p>
+
+                  <div className="bg-white p-4 rounded border">
+                    <h4 className="font-medium mb-2">🎭 How Skills Work:</h4>
+                    <ul className="text-sm space-y-1">
+                      <li>• <strong>Documents</strong> containing instructions, constraints, domain knowledge</li>
+                      <li>• <strong>Dynamic loading</strong> when Claude detects relevant tasks</li>
+                      <li>• <strong>On-demand activation</strong> for specific task types</li>
+                      <li>• <strong>No permanent overhead</strong> in context window</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-4 rounded border">
+                    <h4 className="font-medium mb-2">🚀 Benefits:</h4>
+                    <ul className="text-sm space-y-1">
+                      <li>• <strong>Reusable prompts</strong> across projects</li>
+                      <li>• <strong>Domain expertise</strong> without context bloat</li>
+                      <li>• <strong>Consistent quality</strong> across team members</li>
+                      <li>• <strong>Progressive enhancement</strong> of AI capabilities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-green-900 mb-4">🔤 Typography Skills</h3>
+                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800">
+                    <div className="text-green-600 font-sans font-semibold mb-2">Typography Guidance:</div>
+                    <div className="whitespace-pre-line">
+{`<use_interesting_fonts>
+Typography instantly signals quality. Avoid using boring, generic fonts.
+
+Never use: Inter, Roboto, Open Sans, Lato, default system fonts
+
+Good choices:
+- Code aesthetic: JetBrains Mono, Fira Code, Space Grotesk
+- Editorial: Playfair Display, Crimson Pro
+- Technical: IBM Plex family, Source Sans 3
+- Distinctive: Bricolage Grotesque, Newsreader
+
+Pairing principle: High contrast = interesting
+Use extremes: 100/200 weight vs 800/900, not 400 vs 600
+</use_interesting_fonts>`}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-orange-900 mb-4">🎨 Theme Skills</h3>
+                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800">
+                    <div className="text-orange-600 font-sans font-semibold mb-2">RPG Theme Example:</div>
+                    <div className="whitespace-pre-line">
+{`<always_use_rpg_theme>
+Always design with RPG aesthetic:
+- Fantasy-inspired color palettes with rich, dramatic tones
+- Ornate borders and decorative frame elements
+- Parchment textures, leather-bound styling
+- Epic, adventurous atmosphere with dramatic lighting
+- Medieval-inspired serif typography with embellished headers
+</always_use_rpg_theme>`}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-900 text-green-400 p-6 rounded-lg font-mono text-sm mb-8">
+                <div className="text-white mb-3 font-sans font-semibold">🎯 Comprehensive Frontend Design Skill</div>
+                <pre className="overflow-x-auto whitespace-pre-line">{`<frontend_aesthetics>
+You tend to converge toward generic, "on distribution" outputs. In frontend design,this creates what users call the "AI slop" aesthetic. Avoid this: make creative,distinctive frontends that surprise and delight.
+
+Focus on:
+- Typography: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics.
+
+- Color & Theme: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes. Draw from IDE themes and cultural aesthetics for inspiration.
+
+- Motion: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions.
+
+- Backgrounds: Create atmosphere and depth rather than defaulting to solid colors. Layer CSS gradients, use geometric patterns, or add contextual effects that match the overall aesthetic.
+
+Avoid generic AI-generated aesthetics:
+- Overused font families (Inter, Roboto, Arial, system fonts)
+- Clichéd color schemes (particularly purple gradients on white backgrounds)
+- Predictable layouts and component patterns
+- Cookie-cutter design that lacks context-specific character
+
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. Vary between light and dark themes, different fonts, different aesthetics. You still tend to converge on common choices (Space Grotesk, for example) across generations. Avoid this: it is critical that you think outside the box!
+</frontend_aesthetics>`}</pre>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🎨</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Before Skills</h4>
+                  <div className="text-sm text-gray-600">
+                    Generic Inter fonts, purple gradients, minimal animations, predictable layouts
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">✨</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">After Skills</h4>
+                  <div className="text-sm text-gray-600">
+                    Distinctive typography, cohesive themes, purposeful motion, atmospheric backgrounds
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🚀</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Impact</h4>
+                  <div className="text-sm text-gray-600">
+                    Creative, unique interfaces that surprise and delight users
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-indigo-900 mb-4">📚 Resources & Implementation</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-medium text-indigo-800 mb-2">📖 Learn More</h4>
+                    <a
+                      href="https://www.claude.com/blog/improving-frontend-design-through-skills"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-indigo-600 hover:text-indigo-800 underline text-sm"
+                    >
+                      Improving Frontend Design Through Skills - Claude Blog
+                    </a>
+                    <p className="text-indigo-700 text-sm mt-1">
+                      Complete guide to using Claude Skills for better frontend design
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium text-indigo-800 mb-2">🛠️ Implementation</h4>
+                    <ul className="text-indigo-700 text-sm space-y-1">
+                      <li>• Create markdown files with design skills</li>
+                      <li>• Store in designated Claude directory</li>
+                      <li>• Skills activate automatically for relevant tasks</li>
+                      <li>• Customize for your brand/design system</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-indigo-100 rounded-lg">
+                  <h4 className="font-semibold text-indigo-900 mb-2">🎯 Key Takeaway</h4>
+                  <p className="text-indigo-800 text-sm">
+                    Skills transform Claude from a tool needing constant guidance into one that brings domain expertise to every task.
+                    Create reusable design skills that prevent generic AI outputs and ensure consistent creative quality.
+                  </p>
                 </div>
               </div>
             </div>
