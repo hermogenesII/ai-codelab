@@ -7,6 +7,7 @@ import GradientAnalysis from './components/GradientAnalysis';
 import CreativityAgent from './components/CreativityAgent';
 import MostRatedPopularTopics from './components/MostRatedPopularTopics';
 import MinimalCreativityLanding from './components/MinimalCreativityLanding';
+import UISolutionPage from './components/UISolutionPage';
 
 function App() {
   const [currentView, setCurrentView] = useState('creativity-landing');
@@ -27,6 +28,8 @@ function App() {
         return <CreativityAgent />;
       case 'trending':
         return <MostRatedPopularTopics />;
+      case 'ui-solution':
+        return <UISolutionPage />;
       default:
         return <MinimalCreativityLanding />;
     }

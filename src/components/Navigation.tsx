@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, FileText, Code, Palette, Sparkles, TrendingUp, Rocket } from 'lucide-react';
+import { BarChart3, FileText, Code, Palette, Sparkles, TrendingUp, Rocket, Wrench } from 'lucide-react';
 
 interface NavigationProps {
   currentView: string;
@@ -56,6 +56,13 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChange }) =>
       description: 'Most rated & popular design topics now',
       icon: TrendingUp,
       color: 'bg-red-500'
+    },
+    {
+      id: 'ui-solution',
+      label: 'UI Solutions',
+      description: 'Solve generic UI problems with 3 proven approaches',
+      icon: Wrench,
+      color: 'bg-green-500'
     }
   ];
 
