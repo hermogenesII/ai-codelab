@@ -59,6 +59,12 @@ const UISolutionPage: React.FC = () => {
       title: "🛠️ Component Library Integration",
       subtitle: "JavaScript Components + Recommendations",
       description: "Leverage battle-tested components with curated recommendations"
+    },
+    {
+      id: 4,
+      title: "🚀 Advanced Design System",
+      subtitle: "Professional JSON + Development Templates",
+      description: "Comprehensive design extraction + frontend development frameworks"
     }
   ];
 
@@ -214,7 +220,7 @@ const UISolutionPage: React.FC = () => {
 
       {/* Approach Selection */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {approaches.map((approach) => (
             <button
               key={approach.id}
@@ -481,6 +487,204 @@ const UISolutionPage: React.FC = () => {
                       Use real user feedback and A/B testing to refine your component
                       implementations.
                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeApproach === 4 && (
+            <div className="p-8">
+              <div className="flex items-center mb-6">
+                <span className="text-3xl mr-4">🚀</span>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Advanced Design System & Development
+                  </h2>
+                  <p className="text-gray-600">Professional design extraction + development frameworks</p>
+                </div>
+              </div>
+
+              {/* Method 1: Comprehensive JSON Design System */}
+              <div className="mb-12">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-3">Method 1</span>
+                  Comprehensive JSON Design System Extraction
+                </h3>
+
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                  <h4 className="font-semibold text-blue-900 mb-3">🎯 Element-Specific Color Mapping</h4>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h5 className="font-medium text-blue-800 mb-2">Card Elements:</h5>
+                      <ul className="text-blue-700 space-y-1">
+                        <li>• Card backgrounds vs borders vs content areas</li>
+                        <li>• Icon fills vs containers vs backgrounds</li>
+                        <li>• Text hierarchy color levels</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-medium text-blue-800 mb-2">Interactive Elements:</h5>
+                      <ul className="text-blue-700 space-y-1">
+                        <li>• Button backgrounds vs text vs icons</li>
+                        <li>• Navigation vs action icon colors</li>
+                        <li>• Hover/focus state variations</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                  <h4 className="font-semibold text-green-900 mb-3">🎨 Context-Aware Styling Rules</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="bg-white p-3 rounded border">
+                      <code className="text-green-800">
+                        "Card containers have gradient X, but card icons use solid color Y"
+                      </code>
+                    </div>
+                    <div className="bg-white p-3 rounded border">
+                      <code className="text-green-800">
+                        "Primary buttons use gradient A, secondary buttons use color B"
+                      </code>
+                    </div>
+                    <div className="bg-white p-3 rounded border">
+                      <code className="text-green-800">
+                        "Navigation icons are color C, but action icons are color D"
+                      </code>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-900 text-green-400 p-6 rounded-lg font-mono text-sm mb-6">
+                  <div className="text-white mb-3 font-sans font-semibold">Sample JSON Output:</div>
+                  <pre className="overflow-x-auto">{`{
+  "elementStyling": {
+    "cards": {
+      "background": "linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%)",
+      "border": "#E0E0E0",
+      "shadow": "0 4px 12px rgba(0,0,0,0.1)",
+      "icons": {
+        "fill": "#FFFFFF",
+        "background": "none",
+        "DO_NOT": "Apply card gradients to icons"
+      }
+    },
+    "buttons": {
+      "primary": {
+        "background": "#007AFF",
+        "text": "#FFFFFF",
+        "hover": { "background": "#0056CC" },
+        "DO_NOT": "Use button colors for text elements"
+      }
+    }
+  }
+}`}</pre>
+                </div>
+
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-yellow-900 mb-3">⚠️ Critical Prevention Rules</h4>
+                  <ul className="text-yellow-800 space-y-2">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">🚫</span>
+                      <span>DO NOT apply card gradients to icons or text elements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">🚫</span>
+                      <span>DO NOT use button background colors for text or borders</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">🚫</span>
+                      <span>DO NOT apply container shadows to content elements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">🚫</span>
+                      <span>DO NOT mix navigation and action icon color schemes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Method 2: Frontend Development Template */}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-3">Method 2</span>
+                  Frontend Application Development Template
+                </h3>
+
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
+                  <h4 className="font-semibold text-purple-900 mb-3">📋 Complete Development Prompt</h4>
+                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800 mb-4">
+                    <div className="text-purple-600 font-sans font-semibold mb-2">Frontend Application Development</div>
+                    <div>I need to develop a frontend application with the following specifications:</div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-medium text-purple-800 mb-2">📄 Pages Required:</h5>
+                      <div className="bg-white p-3 rounded border text-sm">
+                        [List key pages and their primary functionality]
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 className="font-medium text-purple-800 mb-2">👥 User Roles and Permissions:</h5>
+                      <div className="bg-white p-3 rounded border text-sm">
+                        [Define who can do what in the system]
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 className="font-medium text-purple-800 mb-2">🔧 Shared Components:</h5>
+                      <ul className="text-purple-700 text-sm space-y-1 ml-4">
+                        <li>• Navigation System – [Sidebar, Top nav, etc.]</li>
+                        <li>• Header/Top Bar – [User info, theme toggle, etc.]</li>
+                        <li>• Breadcrumbs – (If needed for hierarchical navigation)</li>
+                        <li>• Modals/Popups – [Interactive overlay elements]</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-6">
+                  <h4 className="font-semibold text-indigo-900 mb-3">⚙️ Technical Requirements</h4>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h5 className="font-medium text-indigo-800 mb-2">Framework & Styling:</h5>
+                      <ul className="text-indigo-700 space-y-1">
+                        <li>• Use [Specify CSS Framework] for styling</li>
+                        <li>• Focus on component reusability</li>
+                        <li>• Implement URL-based routing</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-medium text-indigo-800 mb-2">Data & Architecture:</h5>
+                      <ul className="text-indigo-700 space-y-1">
+                        <li>• Create proper hooks and services</li>
+                        <li>• Develop mock API store with realistic data</li>
+                        <li>• Ensure end-to-end functionality</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">🚀 Implementation Benefits</h4>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">🏗️</div>
+                      <div className="font-medium text-gray-800">Structured Development</div>
+                      <div className="text-gray-600">Systematic approach to building applications</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">🔧</div>
+                      <div className="font-medium text-gray-800">Technical Excellence</div>
+                      <div className="text-gray-600">Proper architecture and best practices</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">🎯</div>
+                      <div className="font-medium text-gray-800">Clear Requirements</div>
+                      <div className="text-gray-600">Well-defined scope and deliverables</div>
+                    </div>
                   </div>
                 </div>
               </div>
