@@ -513,94 +513,142 @@ const UISolutionPage: React.FC = () => {
                 </h3>
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold text-blue-900 mb-3">🎯 Element-Specific Color Mapping</h4>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <h5 className="font-medium text-blue-800 mb-2">Card Elements:</h5>
-                      <ul className="text-blue-700 space-y-1">
-                        <li>• Card backgrounds vs borders vs content areas</li>
-                        <li>• Icon fills vs containers vs backgrounds</li>
-                        <li>• Text hierarchy color levels</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-blue-800 mb-2">Interactive Elements:</h5>
-                      <ul className="text-blue-700 space-y-1">
-                        <li>• Button backgrounds vs text vs icons</li>
-                        <li>• Navigation vs action icon colors</li>
-                        <li>• Hover/focus state variations</li>
-                      </ul>
-                    </div>
+                  <h4 className="font-semibold text-blue-900 mb-3">📋 Exact Prompt</h4>
+                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800">
+                    Create a comprehensive JSON design system profile by analyzing the provided screenshots. Extract all visual design patterns, component structures, and styling conventions that would enable Cursor AI to consistently replicate this design language across new implementations.
+
+                    Specific Requirements:
+
+                    Element-Specific Color Mapping: For each visual element, specify EXACTLY where colors are applied:
+
+                    Card backgrounds vs card borders vs card content
+
+                    Button backgrounds vs button text vs button icons
+
+                    Icon fills vs icon containers vs icon backgrounds
+
+                    Text colors for different hierarchy levels
+
+                    Background gradients and their precise application areas
+
+                    Accurate Color Extraction: Provide precise hex values by analyzing:
+
+                    Gradient start/end colors and their direction
+
+                    Shadow colors and opacity values
+
+                    Hover state color variations
+
+                    Border colors vs fill colors
+
+                    Text color contrast ratios
+
+                    Context-Aware Styling Rules: Document styling with specific application context:
+
+                    "Card containers have gradient X, but card icons use solid color Y"
+
+                    "Primary buttons use gradient A on background, secondary buttons use color B"
+
+                    "Navigation icons are color C, but action icons are color D"
+
+                    Visual Effect Placement: Specify exactly which elements receive visual treatments:
+
+                    Which elements have shadows (and shadow specifications)
+
+                    Which elements have gradients (and gradient specifications)
+
+                    Which elements have border radius (and specific radius values)
+
+                    Which elements have hover animations
+
+                    Component State Mapping: For each component, document:
+
+                    Default state styling
+
+                    Hover state changes (what changes and how)
+
+                    Active/pressed state appearance
+
+                    Disabled state styling
+
+                    Focus state indicators
+
+                    Output Format: Structure as a detailed JSON object that maps styling to specific elements:
+
+                    json
+
+                    {'{'}
+
+                      "elementStyling": {'{'}
+
+                        "cards": {'{'}
+
+                          "background": "linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%)",
+
+                          "border": "#E0E0E0",
+
+                          "shadow": "0 4px 12px rgba(0,0,0,0.1)",
+
+                          "icons": {'{'}
+
+                            "fill": "#FFFFFF",
+
+                            "background": "none"
+
+                          {'}'}
+
+                        {'}'},
+
+                        "buttons": {'{'}
+
+                          "primary": {'{'}
+
+                            "background": "#007AFF",
+
+                            "text": "#FFFFFF",
+
+                            "hover": {'{'}
+
+                              "background": "#0056CC"
+
+                            {'}'}
+
+                          {'}'}
+
+                        {'}'}
+
+                      {'}'}
+
+                    {'}'}
+
+                    Include specific selectors/contexts for each styling rule.
+
+                    Content Exclusion: Focus purely on design structure and visual patterns - ignore specific text content, actual images, or branded elements.
+
+                    AI Replication Goal: The JSON should serve as a precise style guide that prevents styling misplacement. Each visual effect should be mapped to its exact element context so Cursor AI applies:
+
+                    Gradients to the correct elements (cards vs icons vs buttons)
+
+                    Colors to the right component parts (backgrounds vs text vs borders)
+
+                    Visual effects to appropriate contexts (shadows on containers, not content)
+
+                    Color Accuracy Techniques:
+
+                    Sample colors from multiple points on gradients
+
+                    Note gradient directions (linear, radial, angle)
+
+                    Distinguish between overlay colors and base colors
+
+                    Account for transparency/opacity in layered elements
+
+                    Specify color variations for different states
+
+                    Critical: Include "DO NOT" rules to prevent common misapplications like putting card gradients on icons or button colors on text elements.
+
+                    Provide actionable, specific data that translates directly into code implementation.
                   </div>
-                </div>
-
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold text-green-900 mb-3">🎨 Context-Aware Styling Rules</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="bg-white p-3 rounded border">
-                      <code className="text-green-800">
-                        "Card containers have gradient X, but card icons use solid color Y"
-                      </code>
-                    </div>
-                    <div className="bg-white p-3 rounded border">
-                      <code className="text-green-800">
-                        "Primary buttons use gradient A, secondary buttons use color B"
-                      </code>
-                    </div>
-                    <div className="bg-white p-3 rounded border">
-                      <code className="text-green-800">
-                        "Navigation icons are color C, but action icons are color D"
-                      </code>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gray-900 text-green-400 p-6 rounded-lg font-mono text-sm mb-6">
-                  <div className="text-white mb-3 font-sans font-semibold">Sample JSON Output:</div>
-                  <pre className="overflow-x-auto">{`{
-  "elementStyling": {
-    "cards": {
-      "background": "linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%)",
-      "border": "#E0E0E0",
-      "shadow": "0 4px 12px rgba(0,0,0,0.1)",
-      "icons": {
-        "fill": "#FFFFFF",
-        "background": "none",
-        "DO_NOT": "Apply card gradients to icons"
-      }
-    },
-    "buttons": {
-      "primary": {
-        "background": "#007AFF",
-        "text": "#FFFFFF",
-        "hover": { "background": "#0056CC" },
-        "DO_NOT": "Use button colors for text elements"
-      }
-    }
-  }
-}`}</pre>
-                </div>
-
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-yellow-900 mb-3">⚠️ Critical Prevention Rules</h4>
-                  <ul className="text-yellow-800 space-y-2">
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">🚫</span>
-                      <span>DO NOT apply card gradients to icons or text elements</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">🚫</span>
-                      <span>DO NOT use button background colors for text or borders</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">🚫</span>
-                      <span>DO NOT apply container shadows to content elements</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">🚫</span>
-                      <span>DO NOT mix navigation and action icon color schemes</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
 
@@ -611,80 +659,52 @@ const UISolutionPage: React.FC = () => {
                   Frontend Application Development Template
                 </h3>
 
-                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold text-purple-900 mb-3">📋 Complete Development Prompt</h4>
-                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800 mb-4">
-                    <div className="text-purple-600 font-sans font-semibold mb-2">Frontend Application Development</div>
-                    <div>I need to develop a frontend application with the following specifications:</div>
-                  </div>
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                  <h4 className="font-semibold text-purple-900 mb-3">📋 Exact Prompt</h4>
+                  <div className="bg-white p-4 rounded border text-sm font-mono text-gray-800 whitespace-pre-line">
+                    Prompt Template: Frontend Application Development
 
-                  <div className="space-y-4">
-                    <div>
-                      <h5 className="font-medium text-purple-800 mb-2">📄 Pages Required:</h5>
-                      <div className="bg-white p-3 rounded border text-sm">
-                        [List key pages and their primary functionality]
-                      </div>
-                    </div>
+                    I need to develop a frontend application with the following specifications:
 
-                    <div>
-                      <h5 className="font-medium text-purple-800 mb-2">👥 User Roles and Permissions:</h5>
-                      <div className="bg-white p-3 rounded border text-sm">
-                        [Define who can do what in the system]
-                      </div>
-                    </div>
+                    Pages Required:
 
-                    <div>
-                      <h5 className="font-medium text-purple-800 mb-2">🔧 Shared Components:</h5>
-                      <ul className="text-purple-700 text-sm space-y-1 ml-4">
-                        <li>• Navigation System – [Sidebar, Top nav, etc.]</li>
-                        <li>• Header/Top Bar – [User info, theme toggle, etc.]</li>
-                        <li>• Breadcrumbs – (If needed for hierarchical navigation)</li>
-                        <li>• Modals/Popups – [Interactive overlay elements]</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                     [List key pages and their primary functionality]
 
-                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mb-6">
-                  <h4 className="font-semibold text-indigo-900 mb-3">⚙️ Technical Requirements</h4>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <h5 className="font-medium text-indigo-800 mb-2">Framework & Styling:</h5>
-                      <ul className="text-indigo-700 space-y-1">
-                        <li>• Use [Specify CSS Framework] for styling</li>
-                        <li>• Focus on component reusability</li>
-                        <li>• Implement URL-based routing</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h5 className="font-medium text-indigo-800 mb-2">Data & Architecture:</h5>
-                      <ul className="text-indigo-700 space-y-1">
-                        <li>• Create proper hooks and services</li>
-                        <li>• Develop mock API store with realistic data</li>
-                        <li>• Ensure end-to-end functionality</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                    User Roles and Permissions:
 
-                <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">🚀 Implementation Benefits</h4>
-                  <div className="grid md:grid-cols-3 gap-4 text-sm">
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">🏗️</div>
-                      <div className="font-medium text-gray-800">Structured Development</div>
-                      <div className="text-gray-600">Systematic approach to building applications</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">🔧</div>
-                      <div className="font-medium text-gray-800">Technical Excellence</div>
-                      <div className="text-gray-600">Proper architecture and best practices</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl mb-2">🎯</div>
-                      <div className="font-medium text-gray-800">Clear Requirements</div>
-                      <div className="text-gray-600">Well-defined scope and deliverables</div>
-                    </div>
+                     [Define who can do what in the system]
+
+                    Shared Components:
+
+                    Navigation System – [Describe navigation approach: Sidebar, Top nav, etc.]
+
+                    Header/Top Bar – [Describe common elements: user info, theme toggle, etc.]
+
+                    Breadcrumbs – (If needed for hierarchical navigation)
+
+                    Modals/Popups:
+
+                     [List main interactive elements that appear as overlays]
+
+                    Technical Requirements:
+
+                    Use [Specify CSS Framework] for styling
+
+                    Focus on component reusability
+
+                    Implement URL-based routing for all pages
+
+                    Create proper hooks and services for API data handling
+
+                    Develop a mock API store with realistic data structure (including IDs)
+
+                    Ensure the application is fully functional end-to-end
+
+                    Additional Considerations:
+
+                     [Any specific technical or UX requirements]
+
+                    Please develop this application with clean, maintainable code and intuitive user experience.
                   </div>
                 </div>
               </div>
